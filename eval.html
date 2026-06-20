@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eval</title>
+  </head>
+  <body>
+    <script>
+      var a = 10,
+        b = 20,
+        c = 30,
+        sum,
+        mul,
+        sub;
+      sum = eval("a + b + c");
+      mul = eval("a*b*c");
+      sub = eval("'string'");
+      document.write(sum + "<br>");
+      document.write(mul + "<br>");
+      document.write(sub + "<br>");
+    </script>
+  </body>
+</html>

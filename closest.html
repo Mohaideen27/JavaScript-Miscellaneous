@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>closest</title>
+  </head>
+  <body>
+    <div id="div1">
+      This is the first div element
+      <h3 id="h">This is a heading inside the div</h3>
+      <div id="div2">
+        This is the div inside the div element
+        <div id="div3">
+          This is the div element inside the second by div element
+        </div>
+      </div>
+    </div>
+    <script>
+      var var1 = document.getElementById("div3");
+      var var01 = var1.closest("#div1");
+      var var02 = var1.closest("div div");
+      var var03 = var1.closest("div > div");
+      var var04 = var1.closest(":not(#div3)");
+      console.log(var01);
+      console.log(var02);
+      console.log(var03);
+      console.log(var04);
+    </script>
+  </body>
+</html>

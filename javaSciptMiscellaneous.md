@@ -1,0 +1,40 @@
+# JavaScript Miscellaneous
+- Array Length Property
+- alert()
+- eval()
+- closest()
+- continue()
+- getAttribute()
+- hide elements
+- prompt()
+- removeAttribute()
+- reset()
+- return
+- string split()
+- typeOf Operator
+- ternary operator
+- reload()
+- setAttribute()
+- setInterval()
+- setTimeout()
+- string includes()
+- string trim()
+- setInterval()
+- print()
+- TypedArray
+- set object
+- map object
+- WeakSet object
+- closures
+- dateformat
+- short date
+- long date
+- date parse()
+- defer
+- redirect
+- location replace()
+- scope
+- scroll
+- sleep/wait
+- void
+- form
