@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hide Element</title>
+  </head>
+  <body>
+    <h1>Welcome to the JavaScript Practice</h1>
+    <h2>
+      <div
+        id="div"
+        style="
+          background-color: yellow;
+          font-size: 25px;
+          color: red;
+          border: 2px solid red;
+        "
+      >
+        This is the div element
+      </div>
+      <p id="p">This is a paragraph element</p>
+      <button onclick="fun()" id="btn">invisble</button>
+      <button onclick="fun1()" id="btn">hide</button>
+      <script>
+        function fun() {
+          document.getElementById("div").style.display = "none";
+          document.getElementById("p").style.display = "none";
+        }
+        function fun1() {
+          document.getElementById("div").style.visibility = "hidden";
+          document.getElementById("p").style.visibility = "hidden";
+        }
+      </script>
+    </h2>
+  </body>
+</html>
