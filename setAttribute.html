@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set attribute</title>
+  </head>
+  <body>
+    <h2>
+      It is an example of adding an attribute using the set attribute method
+    </h2>
+    <a href=""></a>
+    <a id="link">gooogle</a>
+    <p>Click the following button to see the effect</p>
+    <button onclick="fun()">Add attribute</button>
+    <script>
+      function fun() {
+        document
+          .getElementById("link")
+          .setAttribute("href", "https://www.google.com");
+      }
+    </script>
+  </body>
+</html>

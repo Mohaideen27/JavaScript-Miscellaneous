@@ -1,0 +1,48 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reload</title>
+  </head>
+  <body>
+    <h1>Welcome to the JavaScript Practice</h1>
+    <h2>This is an example of location reload() method</h2>
+    <p>click the following "reload" button to see the effect</p>
+    <button onclick="fun()">Reload</button>
+    <script>
+      function fun() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html> -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reload</title>
+  </head>
+  <body>
+    <h1>Welcome to the JavaScript Practice</h1>
+    <h2>This is an example of location reload() method</h2>
+
+    <!-- This number will change on every reload -->
+    <p>Random ID: <span id="lucky-number"></span></p>
+
+    <p>click the following "reload" button to see the effect</p>
+    <button onclick="fun()">Reload</button>
+
+    <script>
+      // Automatically generates a new number when the page finishes loading
+      document.getElementById("lucky-number").innerText = Math.floor(
+        Math.random() * 1000,
+      );
+
+      function fun() {
+        location.reload(true);
+      }
+    </script>
+  </body>
+</html>
