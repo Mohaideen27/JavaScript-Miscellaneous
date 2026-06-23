@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeakSet Object</title>
+  </head>
+  <body>
+    <script>
+      let window1 = { title: "Main Window" };
+      let window2 = { title: "settings" };
+      const visitedWindows = new WeakSet([window1, window2]);
+      let window3 = { title: "Profile" };
+
+      visitedWindows.add(window3);
+      console.log("Has window3?", visitedWindows.has(window3));
+      visitedWindows.delete(window2);
+      console.log("has window2?", visitedWindows.has(window2));
+      window1 = null;
+      console.log(visitedWindows);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Object</title>
+  </head>
+  <body>
+    <script>
+      const mySet = new Set(["apple", "banana", "apple", "orange"]);
+      console.log("Initial Set:", mySet);
+      console.log("Has banana?", mySet.has("banana"));
+      mySet.add("grape");
+      mySet.delete("banana");
+      console.log("\n ---Set Values---");
+      for (let val of mySet.values()) {
+        console.log(val);
+      }
+      console.log("\n---Set ForEach---");
+      mySet.forEach((value, key) => {
+        console.log(`Key: ${key}, Values: ${value}`);
+      });
+      mySet.clear();
+      console.log("Set after Clear", mySet.size);
+    </script>
+  </body>
+</html>

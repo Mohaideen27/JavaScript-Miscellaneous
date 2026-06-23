@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Format Pracitce</title>
+  </head>
+  <body>
+    <script>
+      // ISO DATE
+      const isoDateString = "2026-06-22T18:00:00.000Z";
+      const dateFromISO = new Date(isoDateString);
+      console.log("ISO Date Object:", dateFromISO);
+      console.log("Back to ISO String:", dateFromISO.toISOString());
+
+      //   SHORT DATE
+      const shortDateString = "06/22/2026";
+      const dateFromShort = new Date(shortDateString);
+      console.log("\n Short Date Parsed:", dateFromShort.toDateString());
+
+      //   LONG DATE
+      const longDateString = "Jun 22 2026";
+      const dateFromLong = new Date(longDateString);
+      console.log("\n Long Date Parsed:", dateFromLong.toDateString());
+
+      //   USING INTL.DATETIMEFORMAT TO GENERATE A LONG DATE PROPERLY
+      console.log("Date.parse()");
+      const milliseconds = Date.parse("March 21, 2012");
+      console.log(milliseconds);
+
+      //   milliseconds to dateObject
+      const parsedDate = new Date(milliseconds);
+      console.log("Reconstructed Date:", parsedDate.toDateString());
+    </script>
+  </body>
+</html>

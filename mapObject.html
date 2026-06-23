@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Object</title>
+  </head>
+  <body>
+    <script>
+      const userMap = new Map([
+        ["id_1", "Alice"],
+        ["id_2", "Bob"],
+      ]);
+
+      const objKey1 = { role: "admin" };
+      const objKey2 = { role: "user" };
+
+      userMap.set(objKey1, "System Administrator");
+      userMap.set(objKey2, "standart user");
+      userMap.set("id_3", "Alice");
+
+      console.log("get objKey:", userMap.get(objKey1));
+      console.log("Has id_2", userMap.has("id_2"));
+      console.log(userMap);
+
+      userMap.delete("id_2");
+
+      console.log("\n --- Map Keys ---");
+      for (let key of userMap.keys()) {
+        console.log(key);
+      }
+      console.log("\n --- Map Values ---");
+      for (let values of userMap.values()) {
+        console.log(values);
+      }
+
+      console.log("\n --- Map Entries ---");
+      for (let [key, value] of userMap.entries()) {
+        console.log(`${typeof key === "object" ? "ObjectKey" : key}=>${value}`);
+      }
+
+      console.log("\n---Map forEach---");
+      userMap.forEach((value, key) => {
+        console.log(`value:${value}`);
+      });
+      userMap.clear();
+      console.log("Map size after clear:", userMap.size);
+    </script>
+  </body>
+</html>

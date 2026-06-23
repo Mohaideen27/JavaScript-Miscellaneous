@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Closure</title>
+  </head>
+  <body>
+    <script>
+      const globalVaraiable = "I am Global";
+      function outerFun(outerVar) {
+        const outerConst = "I am Outer";
+        return function innerFun(innerVar) {
+          console.log("\n Scope Chain Resolution");
+          console.log(innerVar);
+          console.log(outerVar);
+          console.log(outerConst);
+          console.log(globalVaraiable);
+        };
+      }
+      const myClosure = outerFun("Passed to Outer");
+      myClosure("Passed to Inner");
+    </script>
+  </body>
+</html>

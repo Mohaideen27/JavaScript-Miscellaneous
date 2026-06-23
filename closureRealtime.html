@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure Realtime</title>
+  </head>
+  <body>
+    <script>
+      function createBankAccount(initialBalance) {
+        let balance = initialBalance;
+
+        return {
+          deposit: function (amount) {
+            balance += amount;
+            return `Deposited ${amount}. New Balance: ${balance}`;
+          },
+          withdraw: function (amount) {
+            if (amount > balance) return "Insufficient Balance";
+            balance -= amount;
+            return `Withdraw ${amount}. New balance: ${balance}`;
+          },
+          getBalance: function () {
+            return balance;
+          },
+        };
+      }
+      console.log("\n Closure Practical Example");
+      const myAccount = createBankAccount(100);
+      console.log(myAccount.deposit(50));
+      console.log(myAccount.withdraw(20));
+      console.log(myAccount.balance);
+      console.log(myAccount.getBalance());
+    </script>
+  </body>
+</html>
